@@ -7,6 +7,7 @@ const io = require("socket.io")(server, {
     origin: "*",
     methods: ["GET", "POST"],
   },
+  path: "/api/",
 });
 
 app.use(cors());
