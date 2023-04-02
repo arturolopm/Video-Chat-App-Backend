@@ -4,9 +4,11 @@ const cors = require("cors");
 
 const io = require("socket.io")(server, {
   cors: {
-    origin: "*",
-    methods: ["GET", "POST"],
+    origin: "https://myjou.arturolopez.tech",
+    allowedHeaders: ["my-custom-header"],
+    credentials: true,
   },
+  transports: ["websocket"],
   path: "/api/",
 });
 
